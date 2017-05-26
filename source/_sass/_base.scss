@@ -1,0 +1,86 @@
+body {
+  font-family: "din-2014",sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-bar {
+  background-color: $main-color;
+  box-shadow: 0 2px 8px rgba(black, .2);
+
+  &__property-name {
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    letter-spacing: .4px;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+.main-logo {
+  margin-right: 40px;
+
+  &__icon {
+    max-height: 43px;
+    margin: 5px 6px 5px 30px;
+  }
+
+  &__wordmark {
+    display: inline-block;
+    margin: 11px 0 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 21px;
+    color: white;
+    letter-spacing: 1px;
+  }
+}
+
+.main-panel {
+  flex: 1;
+}
+
+.sidebar {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 195px;
+  height: 100%;
+  background-color: rgba(black, .7);
+  box-shadow: 2px 0 6px rgba(black, .2);
+
+  &__spacer { height: 35px; }
+  &__spacer-flex { flex: 1; }
+  &__settings { background-color: rgba(black, .1); }
+}
+
+.menu-item {
+  display: block;
+  text-align: right;
+  color: white;
+  text-decoration: none;
+  padding: 18px 20px 18px 10px;
+  transition: all .4s ease;
+
+  > .material-icons {
+    float: left;
+    opacity: .15;
+    font-size: 22px;
+  }
+
+  &:hover { 
+    background-color: rgba(white, .05); 
+    > .material-icons { opacity: .4; }
+
+  }
+
+  &--active {
+    padding-right: 16px;
+    border-right: 4px solid $accent-color;
+    background-color: rgba(white, .1);
+    > .material-icons { opacity: .4; }
+  }
+}
+
