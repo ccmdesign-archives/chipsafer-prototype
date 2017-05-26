@@ -53,7 +53,11 @@ body {
 
   &__spacer { height: 35px; }
   &__spacer-flex { flex: 1; }
-  &__settings { background-color: rgba(black, .1); }
+  &__settings { 
+    background-color: rgba(black, .1);
+
+    .menu-item:hover { background-color: rgba(black, .1); }
+  }
 }
 
 .menu-item {
@@ -81,6 +85,12 @@ body {
     border-right: 4px solid $accent-color;
     background-color: rgba(white, .1);
     > .material-icons { opacity: .4; }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: .2;
+    > .material-icons { opacity: .6; }
   }
 }
 
